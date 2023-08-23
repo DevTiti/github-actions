@@ -9,14 +9,14 @@ spec:
   selector:
     matchLabels:
       app: eks-deployment
-    template:
-      metadata:
-        labels:
-          app: eks-deployment
-      spec:
-        containers:
-        - name: ecs-container
-          image: 408935668637.dkr.ecr.us-east-1.amazonaws.com/ecs-container
-          imagePullPolicy: Always
-          ports:
-          - containerPort: 8080
+  template:
+    metadata:
+      labels:
+        app: eks-deployment
+    spec:
+      containers:
+      - name: ecs-container
+        image: 408935668637.dkr.ecr.us-east-1.amazonaws.com/ecs-container
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
