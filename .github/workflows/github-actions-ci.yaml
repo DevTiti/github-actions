@@ -6,7 +6,7 @@ on:
     branches: ["main"]
 
 jobs:
-  deploy:
+  Deploying-Node-JS:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
