@@ -16,6 +16,7 @@ jobs:
       uses: azure/setup-kubectl@v2.0
       with:
         version: 'v1.24.0'
+      id: install
     
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
@@ -33,7 +34,7 @@ jobs:
         REGISTRY: ${{ steps.login-ecr.outputs.registry}}
         REPOSITORY: primuslearning
         IMAGE_TAG: 1.1
-      run:
+      run: |
         docker build -t $REGISTRY/$REGISTRY:$IMAGE_TAG .
         docker push $REGISTRY/$REGISTRY:$IMAGE_TAG
 
