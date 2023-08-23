@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ecs-container
-        image: 408935668637.dkr.ecr.us-east-1.amazonaws.com/ecs-container
+        image: 408935668637.dkr.ecr.us-east-1.amazonaws.com/ecs-container:1.1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
